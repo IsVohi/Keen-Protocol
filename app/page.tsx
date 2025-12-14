@@ -10,6 +10,7 @@ import { DisputePanel } from "@/components/dispute-panel"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { keenOracle } from "@/lib/ergo-contracts"
+import { BackgroundAnimation } from "@/components/background-animation"
 
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState<string>("")
@@ -55,7 +56,9 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative" style={{ position: 'relative', zIndex: 1 }}>
+      <BackgroundAnimation />
+      <div style={{ position: 'relative', zIndex: 10 }}>
       <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <div className="flex items-center gap-3">
@@ -170,6 +173,7 @@ export default function Home() {
           </div>
         )}
       </main>
+      </div>
     </div>
   )
 }

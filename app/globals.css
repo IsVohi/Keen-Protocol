@@ -122,3 +122,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Background floating animations - particles floating from center in all directions */
+@keyframes float-particle {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+    opacity: 0;
+  }
+  5% {
+    opacity: var(--particle-opacity, 0.2);
+  }
+  95% {
+    opacity: var(--particle-opacity, 0.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--end-x, 0), var(--end-y, 0));
+    opacity: 0;
+  }
+}
