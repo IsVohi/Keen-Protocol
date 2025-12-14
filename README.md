@@ -16,6 +16,10 @@ KEEN is designed to **align with Ergo Oracle Pools (EIP-0023)** and act as a **r
 
 ---
 
+<p align="center">
+  <img src="assets/opening.png" width="900"/>
+</p>
+
 ## 🎯 Problem Statement
 
 Decentralized applications depend on oracles — but:
@@ -59,6 +63,9 @@ KEEN introduces a **reputation-weighted oracle protocol** where:
 * Decreases only via slashing
 * Non-transferable, non-forgeable
 
+<p align="center">
+  <img src="assets/register.png" width="900"/>
+</p>
 ### 🧮 Aggregation
 
 * Uses **reputation-weighted median**
@@ -103,6 +110,9 @@ Reputation ↑ / Rewards ↑
 Optional Dispute → Slashing
 ```
 
+<p align="center">
+  <img src="assets/reward.png" width="900"/>
+</p>
 ---
 
 ## 🧩 Smart Contract Architecture
@@ -171,18 +181,39 @@ KEEN includes a **fully client-side frontend**:
 
 ```
 keen/
-├── contracts/          # ErgoScript smart contracts
-├── frontend/           # Wallet-connected UI
-│   ├── components/
-│   ├── services/
-│   ├── App.tsx
-│   └── constants.ts
-├── docs/               # Protocol documentation
-│   ├── architecture.md
-│   ├── invariants.md
-│   └── security.md
-├── README.md
-└── metadata.json
+├── assests/                   
+│   ├── opening.png          
+│   ├── register.png        
+│   └── reward.png       
+|
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Main page
+│   ├── layout.tsx         # Root layout
+│   └── globals.css        # Global styles
+│
+├── components/            # React Components
+│   ├── ui/               # UI primitives (shadcn/ui)
+│   ├── oracle-dashboard.tsx
+│   ├── price-submission.tsx
+│   ├── aggregation-view.tsx
+│   ├── registration-form.tsx
+│   ├── dispute-panel.tsx
+│   ├── wallet-connect.tsx
+│   └── background-animation.tsx
+│
+├── lib/                   # Business Logic
+│   ├── ergo-contracts.ts  # Contract interactions
+│   ├── ergo-wallet.ts     # Wallet integration
+│   └── utils.ts           # Utilities
+│
+├── public/                # Static assets
+├── assests/               # Images
+│
+└── Config Files
+    ├── package.json
+    ├── tsconfig.json
+    ├── next.config.ts
+    └── ...
 ```
 
 ---
