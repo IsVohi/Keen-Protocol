@@ -17,7 +17,7 @@ KEEN is designed to **align with Ergo Oracle Pools (EIP-0023)** and act as a **r
 ---
 
 <p align="center">
-  <img src="assets/opening.png" width="900"/>
+  <img src="assests/opening.png" width="900"/>
 </p>
 
 ## 🎯 Problem Statement
@@ -64,7 +64,7 @@ KEEN introduces a **reputation-weighted oracle protocol** where:
 * Non-transferable, non-forgeable
 
 <p align="center">
-  <img src="assets/register.png" width="900"/>
+  <img src="assests/register.png" width="900"/>
 </p>
 ### 🧮 Aggregation
 
@@ -111,7 +111,7 @@ Optional Dispute → Slashing
 ```
 
 <p align="center">
-  <img src="assets/reward.png" width="900"/>
+  <img src="assests/reward.png" width="900"/>
 </p>
 ---
 
